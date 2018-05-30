@@ -1,5 +1,5 @@
 /**
- * @author: tipe.io
+ * @author: aerobase.io
  */
 
 require('ts-node/register');
@@ -39,6 +39,21 @@ exports.config = {
 
   onPrepare: function() {
     browser.ignoreSynchronization = true;
+
+    browser.driver.get('http://localhost:3000/');
+
+    browser.driver.findElement(by.id('username')).sendKeys('admin');
+    browser.driver.findElement(by.id('password')).sendKeys('password');
+    browser.driver.findElement(by.id('kc-login')).click();
+
+    // Login takes some time, so wait until it's done.
+    // For the test app's login, we know it's done when it redirects to
+    // example.aerobase.io.
+    return browser.driver.wait(function() {
+      return browser.driver.getCurrentUrl().then(function(url) {
+        return /example.aerobase.io/.test(url);
+      });
+    }, 10000);
   },
 
   /**

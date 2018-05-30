@@ -3,6 +3,8 @@
  */
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { environment } from 'environments/environment';
+import { INSTANCE } from '@aerobase/core';
+import { Auth } from '@aerobase/auth';
 
 /**
  * App Module
@@ -14,10 +16,23 @@ import { AppModule } from './app';
  * Bootstrap our Angular app with a top level NgModule
  */
 export function main(): Promise<any> {
-  return platformBrowserDynamic()
-    .bootstrapModule(AppModule)
-    .then(environment.decorateModuleRef)
-    .catch((err) => console.error(err));
+  const mobileServiceConfig = require('assets/mobile-services.json');
+  INSTANCE.init(mobileServiceConfig);
+  const authService = new Auth();
+
+  const initOptions = JSON.parse('{"onLoad": "login-required"}');
+  return authService.init(initOptions)
+    .then(() => {
+      if (authService.isAuthenticated()) {
+        return platformBrowserDynamic()
+          .bootstrapModule(AppModule)
+          .then(environment.decorateModuleRef)
+          .catch((err) => console.error(err));
+      }
+    })
+    .catch((err) => {
+      console.error('Error While initializing Aerobase Auth: ' + err);
+    });
 }
 
 /**

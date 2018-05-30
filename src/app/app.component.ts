@@ -4,7 +4,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { environment } from 'environments/environment';
 import { AppState } from './app.service';
-
 /**
  * App Component
  * Top Level Component
@@ -50,20 +49,15 @@ import { AppState } from './app.service';
     <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
 
     <footer>
-      <span>Angular Starter by <a [href]="twitter">@gdi2290</a></span>
-      <div>
-        <a [href]="url">
-          <img [src]="tipe" width="25%">
-        </a>
-      </div>
+      <span>Angular Starter by <a [href]="twitter">@AerobaseOrg</a></span>
     </footer>
   `
 })
 export class AppComponent implements OnInit {
   public name = 'Angular Starter';
-  public tipe = 'assets/img/tipe.png';
-  public twitter = 'https://twitter.com/gdi2290';
-  public url = 'https://tipe.io';
+  public tipe = 'assets/img/aerobase-black.png';
+  public twitter = 'https://twitter.com/AerobaseOrg';
+  public url = 'https://aerobase.io';
   public showDevModule: boolean = environment.showDevModule;
 
   constructor(
@@ -72,6 +66,7 @@ export class AppComponent implements OnInit {
 
   public ngOnInit() {
     console.log('Initial App State', this.appState.state);
+
   }
 
 }

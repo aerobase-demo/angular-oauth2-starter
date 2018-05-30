@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://tipe.io/" target="_blank">
-    <img  alt="Tipe" src="https://user-images.githubusercontent.com/1016365/30999155-30430eb8-a488-11e7-850e-a7c38dad77c1.png" class="img-responsive">
+  <a href="https://aerobase.io/" target="_blank">
+    <img  alt="AeroBase" src="https://raw.githubusercontent.com/aerobase-demo/angular-oauth2-starter/master/src/assets/img/aerobase-black.png" class="img-responsive">
   </a>
 </p>
 
@@ -8,9 +8,9 @@ ___
 
 [![taylor swift](https://img.shields.io/badge/secured%20by-taylor%20swift-brightgreen.svg)](https://twitter.com/SwiftOnSecurity)
 [![volkswagen status](https://auchenberg.github.io/volkswagen/volkswargen_ci.svg?v=1)](https://github.com/auchenberg/volkswagen)
-[![Build Status](https://travis-ci.org/gdi2290/angular-starter.svg?branch=master)](https://travis-ci.org/gdi2290/angular-starter)
+[![Build Status](https://travis-ci.org/aerobase-demo/angular-oauth2-starter.svg?branch=master)](https://travis-ci.org/aerobase-demo/angular-oauth2-starter)
 [![GitHub version](https://badge.fury.io/gh/gdi2290%2Fangular-starter.svg)](https://badge.fury.io/gh/gdi2290%2Fangular-starter)
-[![Dependency Status](https://david-dm.org/gdi2290/angular-starter.svg)](https://david-dm.org/gdi2290/angular-starter)
+[![Dependency Status](https://david-dm.org/aerobase-demo/angular-oauth2-starter.svg)](https://david-dm.org/aerobase-demo/angular-oauth2-starter)
 [![Stack Share](http://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](http://stackshare.io/gdi2290/angular-starter)
 
 <p align="center">
@@ -22,17 +22,18 @@ ___
 # Angular Webpack Starter [![Join the chat at https://gitter.im/angularclass/angular2-webpack-starter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/angularclass/angular2-webpack-starter?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
-> An Angular starter kit featuring [Angular 5](https://angular.io), [Ahead of Time Compile](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html), [Router](https://angular.io/docs/ts/latest/guide/router.html), [Forms](https://angular.io/docs/ts/latest/guide/forms.html),
+> An Angular starter kit featuring [Angular 5](https://angular.io), [Aerobase OAuth2](https://aerobase.io), [Ahead of Time Compile](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html), [Router](https://angular.io/docs/ts/latest/guide/router.html), [Forms](https://angular.io/docs/ts/latest/guide/forms.html),
 [Http](https://angular.io/docs/ts/latest/guide/server-communication.html),
 [Services](https://gist.github.com/gdi2290/634101fec1671ee12b3e#_follow_@AngularClass_on_twitter),
-[Tests](https://angular.io/docs/ts/latest/guide/testing.html), [E2E](https://angular.github.io/protractor/#/faq#what-s-the-difference-between-karma-and-protractor-when-do-i-use-which-)), [Karma](https://karma-runner.github.io/), [Protractor](https://angular.github.io/protractor/), [Jasmine](https://github.com/jasmine/jasmine), [Istanbul](https://github.com/gotwarlost/istanbul), [TypeScript](http://www.typescriptlang.org/), [@types](https://www.npmjs.com/~types), [TsLint](http://palantir.github.io/tslint/), [Codelyzer](https://github.com/mgechev/codelyzer), [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html), and [Webpack](http://webpack.github.io/) by [Tipe](https://tipe.io).
+[Tests](https://angular.io/docs/ts/latest/guide/testing.html), [E2E](https://angular.github.io/protractor/#/faq#what-s-the-difference-between-karma-and-protractor-when-do-i-use-which-)), [Karma](https://karma-runner.github.io/), [Protractor](https://angular.github.io/protractor/), [Jasmine](https://github.com/jasmine/jasmine), [Istanbul](https://github.com/gotwarlost/istanbul), [TypeScript](http://www.typescriptlang.org/), [@types](https://www.npmjs.com/~types), [TsLint](http://palantir.github.io/tslint/), [Codelyzer](https://github.com/mgechev/codelyzer), [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html), and [Webpack](http://webpack.github.io/) by [AeroBase](https://aerobase.io).
 
 > If you're looking for Angular 1.x please use [NG6-starter](https://github.com/gdi2290/NG6-starter)
 > If you're looking to learn about Webpack and ES6 Build Tools check out [ES6-build-tools](https://github.com/AngularClass/ES6-build-tools)
 > If you're looking to learn TypeScript see [TypeStrong/learn-typescript](https://github.com/TypeStrong/learn-typescript)
 > If you're looking for something easier to get started with then see the angular-seed that I also maintain [gdi2290/angular-seed](https://github.com/gdi2290/angular-seed)
 
-This seed repo serves as an Angular starter for anyone looking to get up and running with Angular and TypeScript fast. Using a [Webpack 3](https://webpack.js.org) for building our files and assisting with boilerplate. We're also using Protractor for our end-to-end story and Karma for our unit tests.
+This seed repo serves as an Angular starter for anyone looking to get up and running with Angular and TypeScript fast. Using a [Webpack 3](https://webpack.js.org) for building our files and assisting with boilerplate. We're also using Protractor for our end-to-end story, Karma for our unit tests and AeroBase OIDC/OAuth2 for assets Security.
+* Secure assets using aerobase ouath2 and OIDC (Open id Connect) and JWT (Json Web Token).
 * Best practices in file and application organization for Angular.
 * Ready to go build system using Webpack for working with TypeScript.
 * Angular examples that are ready to go when experimenting with Angular.
@@ -48,6 +49,7 @@ This seed repo serves as an Angular starter for anyone looking to get up and run
 ### Quick start
 **Make sure you have Node version >= 8.0 and (NPM >= 5 or [Yarn](https://yarnpkg.com) )**
 > Clone/Download the repo then edit `app.component.ts` inside [`/src/app/app.component.ts`](/src/app/app.component.ts)
+> Edit Aerobase services file `mobile-services.json` inside [`/src/assets/mobile-services.json`](/src/assets/mobile-services.json)
 
 ```bash
 # clone our repo
@@ -55,7 +57,7 @@ This seed repo serves as an Angular starter for anyone looking to get up and run
 git clone --depth 1 https://github.com/gdi2290/angular-starter.git
 
 # change directory to our repo
-cd angular-starter
+cd angular-oauth2-starter
 
 # install the repo with npm
 npm install

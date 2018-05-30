@@ -49,9 +49,9 @@ describe(`App`, () => {
     expect(comp).toBeDefined();
   });
 
-  it(`should be @TipeIO`, () => {
-    expect(comp.twitter).toEqual('https://twitter.com/gdi2290');
-    expect(comp.tipe).toEqual('assets/img/tipe.png');
+  it(`should be @Aerobase`, () => {
+    expect(comp.twitter).toEqual('https://twitter.com/AerobaseOrg');
+    expect(comp.tipe).toEqual('assets/img/aerobase-black.png');
     expect(comp.name).toEqual('Angular Starter');
   });
 
