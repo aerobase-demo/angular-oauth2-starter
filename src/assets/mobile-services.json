@@ -1,27 +1,27 @@
 {
   "version": 1,
   "namespace": "aerobase-demo",
-  "clientId": "example-client",
+  "clientId": "kryon-demo",
   "services": [
     {
       "id": "keycloak",
       "name": "keycloak",
       "type": "keycloak",
-      "url": "https://example.aerobase.io/auth/",
+      "url": "http://centos7-runtime.jenkins.aerobase.org/auth/",
       "config": {
-        "authServerUrl": "https://example.aerobase.io/auth",
-        "realm": "example",
-        "resource": "example-client",
+        "authServerUrl": "http://centos7-runtime.jenkins.aerobase.org/auth",
+        "realm": "aerobase",
+        "resource": "kryon-demo",
         "ssl-required": "external",
         "public-client": true,
-        "url": "https://example.aerobase.io/auth"
+        "url": "http://centos7-runtime.jenkins.aerobase.org/auth"
       }
     }
   ],
   "https": {
     "certificatePins": [
       {
-        "host": "https://cloud.aerobase.io",
+        "host": "http://centos7-runtime.jenkins.aerobase.org",
         "certificateHash": "trENjoQnbWupnAtu1/WagBE0RgJ+p7ke2ppWML8vAl0="
       }
     ]

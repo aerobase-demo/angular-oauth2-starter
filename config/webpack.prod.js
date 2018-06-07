@@ -22,6 +22,7 @@ const HashedModuleIdsPlugin = require('webpack/lib/HashedModuleIdsPlugin')
 const PurifyPlugin = require('@angular-devkit/build-optimizer').PurifyPlugin;
 const ModuleConcatenationPlugin = require('webpack/lib/optimize/ModuleConcatenationPlugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const { BaseHrefWebpackPlugin } = require('base-href-webpack-plugin');
 
 /***
  * Ref: https://github.com/mishoo/UglifyJS2/tree/harmony#minify-options
@@ -87,7 +88,7 @@ module.exports = function (env) {
        * See: https://webpack.js.org/configuration/output/#output-filename
        */
       filename: '[name].[chunkhash].bundle.js',
-
+      publicPath: './',
       /**
        * The filename of the SourceMaps for the JavaScript files.
        * They are inside the output.path directory.
@@ -181,6 +182,8 @@ module.exports = function (env) {
         cache: helpers.root('webpack-cache/uglify-cache'),
         uglifyOptions: getUglifyOptions(supportES2015, true)
       }),
+
+      new BaseHrefWebpackPlugin({ baseHref: '/kryondemo/' }),
 
       /**
        * Plugin: CompressionPlugin
