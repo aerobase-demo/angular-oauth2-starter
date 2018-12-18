@@ -6,7 +6,7 @@
 
 ___
 
-[![taylor swift](https://img.shields.io/badge/secured%20by-taylor%20swift-brightgreen.svg)](https://twitter.com/SwiftOnSecurity)
+[![taylor swift](https://img.shields.io/badge/%20by-taylor%20swift-brightgreen.svg)](https://twitter.com/SwiftOnSecurity)
 [![volkswagen status](https://auchenberg.github.io/volkswagen/volkswargen_ci.svg?v=1)](https://github.com/auchenberg/volkswagen)
 [![Build Status](https://travis-ci.org/aerobase-demo/angular-oauth2-starter.svg?branch=master)](https://travis-ci.org/aerobase-demo/angular-oauth2-starter)
 [![GitHub version](https://badge.fury.io/gh/gdi2290%2Fangular-starter.svg)](https://badge.fury.io/gh/gdi2290%2Fangular-starter)

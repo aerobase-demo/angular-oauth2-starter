@@ -17,9 +17,9 @@ describe('Home', () => {
     expect(subject).toEqual(result);
   });
 
-  it('should have `your content here` x-large', async () => {
+  it('should have `Welcome to Aerobase secured application` x-large', async () => {
     const subject = await element(by.css('[x-large]')).getText();
-    const result  = 'Your Content Here';
+    const result  = ' Here';
     expect(subject).toEqual(result);
   });
 

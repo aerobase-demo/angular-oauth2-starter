@@ -4,8 +4,8 @@
   "clientId": "example-client",
   "services": [
     {
-      "id": "keycloak",
-      "name": "keycloak",
+      "id": "aerobase",
+      "name": "aerobase",
       "type": "keycloak",
       "url": "https://example.aerobase.io/auth/",
       "config": {
