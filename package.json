@@ -86,8 +86,6 @@
     "webpack": "node --max_old_space_size=4096 node_modules/webpack/bin/webpack.js"
   },
   "dependencies": {
-    "@aerobase/auth": "2.0.0",
-    "@aerobase/core": "2.0.0",
     "@angular/animations": "^5.2.11",
     "@angular/common": "^5.2.11",
     "@angular/compiler": "^5.2.11",
@@ -97,6 +95,7 @@
     "@angular/platform-browser-dynamic": "^5.2.11",
     "@angular/platform-server": "^5.2.11",
     "@angular/router": "^5.2.11",
+    "aerobase-angular": "^6.0.0",
     "core-js": "^2.6.1",
     "http-server": "^0.11.1",
     "ie-shim": "^0.1.0",

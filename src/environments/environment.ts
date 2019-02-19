@@ -8,12 +8,26 @@ Error.stackTraceLimit = Infinity;
 require('zone.js/dist/long-stack-trace-zone');
 
 // export const ENV_FIREBASE_CONFIG: any = FIREBASE_CONFIG;
+import { AerobaseConfig, AerobaseInitOptions } from 'aerobase-angular';
+
+// Add here your aerobase setup infos
+let aerobaseConfig: AerobaseConfig = {
+  url: 'https://example.aerobase.io/auth/',
+  realm: 'example',
+  clientId: 'example-client'
+};
+
+let aerobaseInitOptions:  AerobaseInitOptions = {
+  onLoad: "login-required"
+}
 
 export const environment: Environment = {
   production: false,
 
   showDevModule: true,
-
+ 
+  aerobase: aerobaseConfig,
+  aerobaseOptions: aerobaseInitOptions,  
   /** Angular debug tools in the dev console
    * https://github.com/angular/angular/blob/86405345b781a9dc2438c0fbe3e9409245647019/TOOLS_JS.md
    * @param modRef

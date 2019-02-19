@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,6 +22,8 @@ import { DevModuleModule } from './+dev-module';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
+import { AerobaseAngularModule, AerobaseService } from 'aerobase-angular';
+import { initializer } from './app.initilizer';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -55,6 +57,7 @@ interface StoreType {
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+    AerobaseAngularModule,
     RouterModule.forRoot(ROUTES, {
       useHash: Boolean(history.pushState) === false,
       preloadingStrategy: PreloadAllModules
@@ -72,7 +75,13 @@ interface StoreType {
    */
   providers: [
     environment.ENV_PROVIDERS,
-    APP_PROVIDERS
+    APP_PROVIDERS,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializer,
+      multi: true,
+      deps: [AerobaseService]
+    }
   ]
 })
 export class AppModule {}

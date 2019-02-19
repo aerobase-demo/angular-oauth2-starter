@@ -16,23 +16,10 @@ import { AppModule } from './app';
  * Bootstrap our Angular app with a top level NgModule
  */
 export function main(): Promise<any> {
-  const mobileServiceConfig = require('assets/mobile-services.json');
-  INSTANCE.init(mobileServiceConfig);
-  const authService = new Auth();
-
-  const initOptions = JSON.parse('{"onLoad": "login-required"}');
-  return authService.init(initOptions)
-    .then(() => {
-      if (authService.isAuthenticated()) {
-        return platformBrowserDynamic()
-          .bootstrapModule(AppModule)
-          .then(environment.decorateModuleRef)
-          .catch((err) => console.error(err));
-      }
-    })
-    .catch((err) => {
-      console.error('Error While initializing Aerobase Auth: ' + err);
-    });
+  return platformBrowserDynamic()
+    .bootstrapModule(AppModule)
+    .then(environment.decorateModuleRef)
+    .catch((err) => console.error(err));
 }
 
 /**
